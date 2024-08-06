@@ -42,12 +42,13 @@ class FetchCountriesJob implements ShouldQueue
                     'flag' => $country['flags']['png'],
                     'lat' => $country['latlng'][0] ?? 0,
                     'long' => $country['latlng'][1] ?? 0,
+                    'population' => $country['population'],
                     'created_at' => $now,
                     'updated_at' => $now,
                 ];
             }
 
-            Country::upsert($insertData, ['name_en'], ['name_fa', 'flag', 'lat', 'long', 'updated_at']);
+            Country::upsert($insertData, ['name_en'], ['name_fa', 'flag', 'lat', 'long', 'population', 'updated_at']);
         });
 
     }

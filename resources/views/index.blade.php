@@ -30,6 +30,7 @@
                                     '<h5 class="card-title">' + country.name_en + ' (' + country.name_fa + ')</h5>' +
                                     '<img src="' + country.flag + '" alt="Flag" style="width: 50px; height: auto;">' +
                                     '<p class="card-text">Latitude: ' + country.lat + ', Longitude: ' + country.long + '</p>' +
+                                    '<p class="card-text">Population:' + ' ' + country.population +
                                     '</div>' +
                                     '</div>'
                                 );

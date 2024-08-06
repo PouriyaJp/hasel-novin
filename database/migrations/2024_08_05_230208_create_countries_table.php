@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('flag');
             $table->float('lat');
             $table->float('long');
+            $table->integer('population');
             $table->timestamps();
             $table->softDeletes();
         });
